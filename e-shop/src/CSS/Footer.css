@@ -1,0 +1,40 @@
+
+
+.footer-container {
+    background-color: #eeeeee;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    width: 100%; 
+    margin-bottom: 0;
+    border-top: 1px solid #ccc;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  

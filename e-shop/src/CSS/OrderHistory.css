@@ -1,0 +1,26 @@
+
+.order-history-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .order-history-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .order-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .order-item p {
+    margin: 5px 0;
+  }
+  
+ 
+  
+  
+  
