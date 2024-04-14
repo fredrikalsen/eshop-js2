@@ -12,7 +12,7 @@ export default function Products() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('https://js2-ecommerce-api.vercel.app/api/products')
+    fetch('http://localhost:9999/api/products')
       .then(response => response.json())
       .then(data => {
         setProducts(data);

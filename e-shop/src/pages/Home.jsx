@@ -11,8 +11,8 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://js2-ecommerce-api.vercel.app/api/products');
-        const firstFourProducts = response.data.slice(0, 10);
+        const response = await axios.get('http://localhost:9999/api/products');
+        const firstFourProducts = response.data.slice(0, 5);
         setSelectedProducts(firstFourProducts);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -21,6 +21,8 @@ const Home = () => {
 
     fetchData();
   }, []);
+
+  console.log(selectedProducts);
 
   return (
     <div className="home-container">
@@ -38,21 +40,28 @@ const Home = () => {
   
      
       <h1 className="selected-products">Selected Products</h1>
-    
+
+      
+      
+      
     
       <div className="selected-products-container">
-      {selectedProducts.map((product) => (
-  <div key={product._id} className="product-item">
-    <Link to={`/products/${product._id}`}>
+      {selectedProducts.map((product) => {
+  console.log(product._id);  // This will log the product id
+  return (
+    <div key={product._id} className="product-item">
+      <Link to={`/products/${product._id}`}>
         <img
           src={product.images[0]}
           alt={product.name}
           className="product-image-home"
         />
-    </Link>
-    <p>{product.name}</p>
-  </div>
-))}
+      </Link>
+      <p>{product.name}</p>
+    </div>
+  );
+
+})}
       </div>
     
      

@@ -71,7 +71,7 @@ const ContactForm = () => {
 
   const sendFormDataToApi = async (formData) => {
     try {
-      const response = await fetch('https://js2-ecommerce-api.vercel.app/api/messages', {
+      const response = await fetch('http://localhost:9999/api/messages/send-message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

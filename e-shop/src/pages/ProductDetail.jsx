@@ -13,7 +13,7 @@ function ProductDetail() {
   const { addToCart } = useCartContext(); // Uppdatera till useCartContext
 
   useEffect(() => {
-    fetch(`https://js2-ecommerce-api.vercel.app/api/products/${productId}`)
+    fetch(`http://localhost:9999/api/products/${productId}`)
       .then(response => response.json())
       .then(data => setProduct(data))
       .catch(error => console.error('Error fetching product details:', error));
